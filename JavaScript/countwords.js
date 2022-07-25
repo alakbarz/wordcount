@@ -17,12 +17,14 @@ for (let i = 0; i < args.length; i++) {
   }
 }
 
+// Sorting the words by most occurences
 const wordsSorted = Object.keys(words)
   .sort(function (a, b) {
     return words[a] + words[b];
   })
   .map((key) => ({ [key]: words[key] }));
 
+// Printing words and occurences to console
 for (const word of wordsSorted) {
   for (const k in word) {
     console.log(`${word[k]} ${k}`);
