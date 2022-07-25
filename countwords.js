@@ -19,11 +19,9 @@ for (let i = 0; i < args.length; i++) {
 
 const wordsSorted = Object.keys(words)
   .sort(function (a, b) {
-    return words[a] - words[b];
+    return words[a] + words[b];
   })
   .map((key) => ({ [key]: words[key] }));
-
-console.log(wordsSorted);
 
 for (const word of wordsSorted) {
   for (const k in word) {
